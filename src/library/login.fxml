@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="library.login">
+   <children>
+      <Button fx:id="btnLogin" layoutX="254.0" layoutY="265.0" mnemonicParsing="false" onAction="#ActionLogin" prefHeight="39.0" prefWidth="91.0" text="Login" />
+      <PasswordField fx:id="tfPassword" layoutX="300.0" layoutY="182.0" promptText="Your Password" />
+      <TextField fx:id="tfUsername" layoutX="300.0" layoutY="113.0" promptText="Your Username" />
+      <Label layoutX="256.0" layoutY="42.0" text="Login Page">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <Label layoutX="151.0" layoutY="117.0" text="Username" />
+      <Label layoutX="151.0" layoutY="186.0" text="Password" />
+      <Button fx:id="btnCreate" layoutX="251.0" layoutY="344.0" mnemonicParsing="false" onAction="#Signup" text="Create Account" />
+   </children>
+</AnchorPane>

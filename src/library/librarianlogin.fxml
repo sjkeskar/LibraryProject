@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="library.Librarianlogin">
+   <children>
+      <TabPane prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Add Book">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="264.0" prefWidth="400.0">
+                     <children>
+                        <Button layoutX="274.0" layoutY="320.0" mnemonicParsing="false" onAction="#addBook" text="Submit" />
+                        <Label layoutX="164.0" layoutY="61.0" text="Book" />
+                        <Label layoutX="159.0" layoutY="132.0" text="Author" />
+                        <TextField fx:id="tfNewTitle" layoutX="252.0" layoutY="57.0" promptText="Enter book Title" />
+                        <TextField fx:id="tfNewAuthor" layoutX="252.0" layoutY="128.0" promptText="Enter Author name" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Remove Book">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button layoutX="273.0" layoutY="319.0" mnemonicParsing="false" onAction="#removeBook" text="Submit" />
+                        <Label layoutX="157.0" layoutY="61.0" text="Book" />
+                        <Label layoutX="152.0" layoutY="135.0" text="Author" />
+                        <TextField fx:id="tfRemoveTitle" layoutX="252.0" layoutY="57.0" promptText="Enter book Title" />
+                        <TextField fx:id="tfRemoveAuthor" layoutX="252.0" layoutY="131.0" promptText="Enter Author name" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Update Book">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button layoutX="273.0" layoutY="320.0" mnemonicParsing="false" onAction="#updateBook" text="Submit" />
+                        <Label layoutX="129.0" layoutY="59.0" text="Current Book Name" />
+                        <Label layoutX="129.0" layoutY="114.0" text="Current Author Name" />
+                        <TextField fx:id="tfUpdateCurrentTitle" layoutX="286.0" layoutY="55.0" prefHeight="26.0" prefWidth="164.0" promptText="Enter current book Title" />
+                        <TextField fx:id="tfUpdateCurrentAuthor" layoutX="286.0" layoutY="110.0" prefHeight="26.0" prefWidth="163.0" promptText="Enter current Author name" />
+                        <TextField fx:id="tfUpdateNewTitle" layoutX="286.0" layoutY="191.0" prefHeight="26.0" prefWidth="163.0" promptText="Enter new book Title" />
+                        <TextField fx:id="tfUpdateNewAuthor" layoutX="286.0" layoutY="250.0" prefHeight="26.0" prefWidth="163.0" promptText="Enter new Author name" />
+                        <Label layoutX="129.0" layoutY="195.0" text="New Book Name" />
+                        <Label layoutX="132.0" layoutY="254.0" text="New Author Name" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Add user">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button layoutX="273.0" layoutY="322.0" mnemonicParsing="false" onAction="#AddUser" text="Submit" />
+                        <Label layoutX="116.0" layoutY="47.0" text="username" />
+                        <Label layoutX="117.0" layoutY="104.0" text="password" />
+                        <Label layoutX="117.0" layoutY="222.0" text="role" />
+                        <TextField fx:id="tfAddUserName" layoutX="252.0" layoutY="47.0" promptText="Enter username" />
+                        <Label layoutX="117.0" layoutY="160.0" text="confirm password" />
+                        <PasswordField fx:id="tfAddUserPass" layoutX="254.0" layoutY="100.0" promptText="Enter Password" />
+                        <PasswordField fx:id="tfAddUserRpass" layoutX="254.0" layoutY="156.0" promptText="Re-Enter Password" />
+                        <RadioButton layoutX="256.0" layoutY="222.0" mnemonicParsing="false" text="Student">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="role" />
+                           </toggleGroup></RadioButton>
+                        <RadioButton layoutX="256.0" layoutY="246.0" mnemonicParsing="false" text="Librarian" toggleGroup="$role" />
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Delete user">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="126.0" layoutY="51.0" text="Username" />
+                        <Label layoutX="127.0" layoutY="121.0" text="Password" />
+                        <TextField fx:id="tfDelUserName" layoutX="253.0" layoutY="47.0" promptText="Enter Username" />
+                        <Button layoutX="273.0" layoutY="321.0" mnemonicParsing="false" onAction="#removeUser" text="Submit" />
+                        <PasswordField fx:id="tfDelUserPass" layoutX="254.0" layoutY="117.0" promptText="Enter Password" />
+                        <PasswordField fx:id="tfDelUserRePass" layoutX="254.0" layoutY="173.0" promptText="Re-Enter Password" />
+                        <Label layoutX="127.0" layoutY="177.0" text="Confirm Password" />
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Logout">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="btnLogout" layoutX="274.0" layoutY="268.0" mnemonicParsing="false" text="Logout" />
+                        <Label layoutX="259.0" layoutY="109.0" text="Confirm Logout" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

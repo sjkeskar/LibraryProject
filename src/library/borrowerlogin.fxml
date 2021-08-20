@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="library.Borrowerlogin">
+   <children>
+      <TabPane prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Borrow">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="21.0" layoutY="14.0" text="Book Name" />
+                        <TextField fx:id="tfBookBorrow" layoutX="123.0" layoutY="10.0" promptText="Book to borrow" />
+                        <Button layoutX="325.0" layoutY="10.0" mnemonicParsing="false" onAction="#Borrow" text="Submit" />
+                        <TableView fx:id="tbBooks" layoutY="44.0" prefHeight="326.0" prefWidth="600.0">
+                           <columns>
+                              <TableColumn fx:id="allTitle" prefWidth="297.19999998807907" text="Books" />
+                              <TableColumn fx:id="allAuthor" prefWidth="302.0" text="Author" />
+                           </columns>
+                        </TableView>
+                        <Button layoutX="493.0" layoutY="10.0" mnemonicParsing="false" onAction="#allBooks" text="Refresh Table" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Return">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button layoutX="345.0" layoutY="10.0" mnemonicParsing="false" onAction="#Return" text="Submit" />
+                        <TextField fx:id="tfBookReturn" layoutX="135.0" layoutY="10.0" promptText="Book to Return" />
+                        <Label layoutX="22.0" layoutY="14.0" text="Book Name" />
+                        <Button layoutX="492.0" layoutY="10.0" mnemonicParsing="false" onAction="#PendingBooks" text="Refresh Table" />
+                        <TableView fx:id="tbPending" layoutY="45.0" prefHeight="326.0" prefWidth="600.0">
+                           <columns>
+                              <TableColumn fx:id="pendingTitle" prefWidth="296.59999388456345" text="Books" />
+                              <TableColumn fx:id="pendingDate" prefWidth="298.6000061035156" text="Borrow Date" />
+                           </columns>
+                        </TableView>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="LogOut">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="251.0" layoutY="94.0" text="Confirm Logout">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="btnLogout" layoutX="274.0" layoutY="254.0" mnemonicParsing="false" onAction="#LogOut" text="Logout" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="220.0" prefWidth="455.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="library.MessagePop">
+   <children>
+      <Button fx:id="btnOK" alignment="CENTER" cancelButton="true" layoutX="211.0" layoutY="124.0" mnemonicParsing="false" onAction="#close" text="OK" />
+      <Label fx:id="lbMessage" layoutX="144.0" layoutY="65.0" text="Please Enter correct Details" textAlignment="CENTER">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
