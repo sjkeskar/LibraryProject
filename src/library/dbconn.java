@@ -16,7 +16,7 @@ public class dbconn {
     dbconn(){
         try{
             String s = "jdbc:mysql://localhost:3306/library";
-            conn = DriverManager.getConnection(s,"SJK","SJK@vit");
+            conn = DriverManager.getConnection(s,Your Login ID,Your Password);
             stmt = conn.createStatement();
         }catch (Exception e){
             System.out.println(e.getMessage());
